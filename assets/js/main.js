@@ -8,7 +8,7 @@
 		Models: {},
 		Collections: {},
 		Views: {},
-		Router: {},
+		Router: {}
 	};
 
 	//helper to render templates
@@ -20,7 +20,9 @@
 		routes : {
 			'' : 'index',
 			'show/:id': 'show',
-			'download/*filename': 'download'
+			'download/*filename': 'download',
+			'search/:query' : 'search',
+			'*error' : 'default'
 		},
 
 		index : function(){
@@ -32,6 +34,12 @@
 		},
 		download : function(filename){
 			console.log('downloading file id: ' + filename);
+		},
+		search : function(query){
+			console.log('searching for: ' + query);
+		},
+		default : function(query){
+			alert('mmm maybe you are lost... URL: ' + query);
 		}
 	});
 
