@@ -19,7 +19,8 @@
 	App.Router = Backbone.Router.extend({
 		routes : {
 			'' : 'index',
-			'show/:id': 'show'
+			'show/:id': 'show',
+			'download/*filename': 'download'
 		},
 
 		index : function(){
@@ -28,6 +29,9 @@
 
 		show : function(id){
 			console.log('hi from show page of id: ' + id);
+		},
+		download : function(filename){
+			console.log('downloading file id: ' + filename);
 		}
 	});
 
