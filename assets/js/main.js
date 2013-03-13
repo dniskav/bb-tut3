@@ -19,15 +19,15 @@
 	App.Router = Backbone.Router.extend({
 		routes : {
 			'' : 'index',
-			'show': 'show'
+			'show/:id': 'show'
 		},
 
 		index : function(){
 			console.log('hi there from the index page');
 		},
 
-		show : function(){
-			console.log('hi from show page');
+		show : function(id){
+			console.log('hi from show page of id: ' + id);
 		}
 	});
 
